@@ -8,10 +8,10 @@ public class UiDragHandler : MonoBehaviour, IDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (playerData.playerCaught)
-        {
-            return;
-        }
+        //if (playerData.playerCaught)
+        //{
+        //    return;
+        //}
 
         inputData.touchYawValue -= eventData.delta.y * inputData.touchSensitivity; 
         inputData.touchPitchValue += eventData.delta.x * inputData.touchSensitivity;

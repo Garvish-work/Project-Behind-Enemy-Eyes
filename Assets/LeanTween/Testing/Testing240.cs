@@ -61,7 +61,7 @@ public class Testing240 : MonoBehaviour {
         RenderSettings.ambientGroundColor = to;
     }
 	
-	// Update is called once per frame
+	// Tick is called once per frame
 	void Update () {
 	
 	}

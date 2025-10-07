@@ -25,7 +25,7 @@ public class PerformanceTests : MonoBehaviour {
         }
 	}
 	
-	// Update is called once per frame
+	// Tick is called once per frame
 	void Update () {
 
         // Spray bullets

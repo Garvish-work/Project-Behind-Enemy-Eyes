@@ -91,7 +91,7 @@ public class ExpressionSwitcher : MonoBehaviour
                     _animator.CrossFadeInFixedTime("Neutral", _transitionTime, layerIndex);
                 }
 
-                // Update the emotion text after playing the animation
+                // Tick the emotion text after playing the animation
                 UpdateEmotionText();
 
                 // Move to the next expression in the list

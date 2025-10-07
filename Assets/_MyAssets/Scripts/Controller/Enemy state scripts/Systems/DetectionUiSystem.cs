@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(PlayerDetectionController))]
-public class PlayerDetectionUiController : MonoBehaviour, IUpdateUi
+[RequireComponent(typeof(EnemyDetectionSystem))]
+public class DetectionUiSystem : MonoBehaviour, IUpdateUi
 {
     [Header("<b>Components")]
     [SerializeField] private Animator animator;
 
     [Header("<b>Scriptable")]
-    [SerializeField] private PlayerData playerData;
+    [SerializeField] private Transform player;
      
     [Header("<b>User interface")]
     [SerializeField] private Image eyeImage;
@@ -26,7 +26,7 @@ public class PlayerDetectionUiController : MonoBehaviour, IUpdateUi
 
     public void UpdateGUI(float updateValue)
     {
-        mainCanvas.transform.LookAt(playerData.playerPosition, Vector3.up);
+        mainCanvas.transform.LookAt(player.position, Vector3.up);
         eyeImage.fillAmount = updateValue;
     }
 }

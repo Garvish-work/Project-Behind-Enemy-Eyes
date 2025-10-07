@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerDetectionController : MonoBehaviour
+public class EnemyDetectionSystem : MonoBehaviour
 {
     IUpdateUi uiUpdater;
     [Header("<b>Scriptable")]

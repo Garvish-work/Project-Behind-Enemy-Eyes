@@ -27,7 +27,7 @@ public class Testing243 : MonoBehaviour {
         LeanTween.sequence().append(LeanTween.value (lightInScene.gameObject, (float f) =>	lightInScene.range = f, 8, 12, .1f)).append (LeanTween.value (lightInScene.gameObject, (float f) =>	lightInScene.range = f, 12, 8, .2f));
 	} 
 	
-	// Update is called once per frame
+	// Tick is called once per frame
 	void Update () {
 	
 	}

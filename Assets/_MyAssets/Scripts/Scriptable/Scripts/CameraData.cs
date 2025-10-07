@@ -4,4 +4,4 @@ using UnityEngine;
 public class CameraData : ScriptableObject
 {
     public float camFollowSpeed = 5.0f;
-}
+} 

@@ -33,7 +33,7 @@ public class PathSplineEndless : MonoBehaviour {
 		}
 		refreshSpline();
 
-		// Animate in track ahead of the car
+		// AnimateMovemnet in track ahead of the car
 		LeanTween.value(gameObject, 0, 0.3f, 2f).setOnUpdate( ( float val )=>{
 			pushTrackAhead = val;
 		});
@@ -47,7 +47,7 @@ public class PathSplineEndless : MonoBehaviour {
 			refreshSpline();
 		}
 
-		// Update avatar's position on correct track
+		// Tick avatar's position on correct track
 		track.place( car.transform, carIter );
 		carIter += carAdd * Time.deltaTime;
 
@@ -95,7 +95,7 @@ public class PathSplineEndless : MonoBehaviour {
 		float treeX = zIter%2==0 ? -15f : 15f;
 		tree.transform.position = new Vector3( randomInFrontPosition.x + treeX, 0f, zIter*40f);
 
-		// Animate in new tree (just for fun)
+		// AnimateMovemnet in new tree (just for fun)
 		LeanTween.rotateAround( tree, Vector3.forward, 0f, 1f).setFrom( zIter%2==0 ? 180f : -180f).setEase(LeanTweenType.easeOutBack);
 
 		trackPts.Add( randomInFrontPosition ); // Add a future spline node

@@ -10,18 +10,10 @@ public class PlayerAnimationController : MonoBehaviour
     float leanValue;
     [SerializeField] private float leanValueSmoothness = 20f;
 
-    private void Update()
-    {
-        Animate();
-    }
-
-    private void Animate()
+    public void Animate()
     {
         animator.SetFloat("xValue", inputData.lerpKeyboardX);
         animator.SetFloat("yValue", inputData.lerpKeyboardY);
-
-        animator.SetBool("isSprinting", inputData.isSprinting);
-        animator.SetBool("isCrouching", inputData.isCrouching);
 
         if (inputData.isMoving)
         {
@@ -39,5 +31,24 @@ public class PlayerAnimationController : MonoBehaviour
 
         leanValue = Mathf.MoveTowards(leanValue, _mouseInput, leanValueSmoothness * Time.deltaTime);
         animator.SetFloat("LeanValue", leanValue);
+    }
+
+    public void GoIntoCrouchState(bool check)
+    {
+        animator.SetBool("isCrouching", check);
+    }
+
+    public void GoIntoSprintState(bool check)
+    {
+        animator.SetBool("isSprinting", check);
+    }
+
+    public void StopAnim()
+    {
+        animator.SetFloat("xValue", 0);
+        animator.SetFloat("yValue", 0);
+
+        animator.SetBool("isSprinting", false);
+        animator.SetBool("isCrouching", false);
     }
 }

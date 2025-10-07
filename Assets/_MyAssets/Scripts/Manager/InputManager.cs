@@ -10,6 +10,15 @@ public class InputManager : MonoBehaviour
     [SerializeField] private Joystick joystick;
     [SerializeField] private GameObject touchControls;
 
+    PlayerBaseState currentState;
+
+    // components
+    [SerializeField] private Animator playerAnimator;
+
+    // controllers
+    [SerializeField] private PlayerPhysicsController phyController;
+    [SerializeField] private PlayerAnimationController animController;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -19,6 +28,7 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         StartSettings();
+        currentState = new PlayerWalkingState(inputData, playerData, playerAnimator, phyController, animController);
     }
 
     private void SetToDefaultSetting()
@@ -40,11 +50,12 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        if (playerData.playerCaught)
-        {
-            SetToDefaultSetting();
-            return;
-        }
+        currentState = currentState.Process();
+        //if (playerData.playerCaught)
+        //{
+        //    SetToDefaultSetting();
+        //    return;
+        //}
 
         ReadMouseInputs();
         ReadKeyboardInputs();

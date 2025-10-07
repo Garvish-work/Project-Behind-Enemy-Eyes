@@ -81,7 +81,7 @@ public class RandomisedLayerWeight : MonoBehaviour
 
     void Update()
     {
-        // Update timers
+        // Tick timers
         transitionTimer -= Time.deltaTime;
         holdTimer -= Time.deltaTime;
 

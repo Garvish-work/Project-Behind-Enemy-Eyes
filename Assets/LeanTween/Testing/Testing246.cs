@@ -14,7 +14,7 @@ public class Testing246 : MonoBehaviour {
  //       LeanTween.alpha(tweenAlpha, 0f, 1f).setRecursive(false);   
  //   }
     
-	//void Update () {
+	//void Tick () {
  //       if (Time.time >= nextElapsed)
  //       {
  //           nextElapsed = Time.time + 0.1f;
