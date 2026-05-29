@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91843ca5e7275844b9ea77d2f4d6781, type: 3}
   m_Name: Input data
   m_EditorClassIdentifier: 
-  inputType: 0
+  inputType: 1
   isMoving: 0
-  isSprinting: 0
+  isSprinting: 1
   isCrouching: 0
   rawKeyboardX: 0
   rawKeyboardY: 0
@@ -27,6 +27,6 @@ MonoBehaviour:
   touchSensitivity: 0.3
   mouseVertThreshold: {x: -45, y: 45}
   rawTouchXValue: 0
-  touchYawValue: 21.018124
-  touchPitchValue: -538.7448
-  camRotation: {x: -0, y: 0.99994004, z: -0, w: -0.010953195}
+  touchYawValue: -0.20507036
+  touchPitchValue: -551.13934
+  camRotation: {x: -0, y: 0.99527895, z: -0, w: 0.097055964}
